@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+#header {
+    height: 10vh;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    line-height: 10vh;
+}
+#body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    line-height: 100vh;
+}
+.main {
+    background-color: aliceblue;
+}
+.aside {
+    background-color: orange;
+}
+#footer {
+    height: 10vh;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    line-height: 10vh;
+}

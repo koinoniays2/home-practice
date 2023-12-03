@@ -1,0 +1,90 @@
+.container {
+    background: beige;
+    height: 100px; 
+    /* height: 80vh; */
+    /* 100%와 다른점> 부모와 상관없이 100% view hight 다쓰겠다.*/
+    display: flex;
+    flex-direction: row-reverse;
+    /* 기본값 row 
+    column: 중심축이 수평
+    row: 중심축이 수직
+    reverse하게되면 시작점도 바뀐다( *justify-content로 바꿔줘야함)
+    flex-wrap: nowrap;
+    /* 기본값 nowrap 아이템이 container에 꽉차도 다음라인으로 넘어가지 않음
+    wrap: 다음라인으로 넘어감
+    한번에 설정 flex-flow: row nowrap; */
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* 중심축에서 아이템 배치방법
+       기본값 flex-start 
+       end 오른쪽 배치
+       center 중간 배치
+       space-arund space-evenly space-between */
+    align-items: end;
+    /* 반대축에서 아이템 배치방법 
+       baseline 텍스트가 균등하게 보여짐(ex. 아이템 한군데에만 패딩이 들어갔을 때)
+    */
+    align-content: space-between;
+    /* 줄바꿈이 생겼을 때 반대축 아이템 기준으로 스페이스*/
+    border: 1px solid black;
+}
+    .item {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        margin-top: auto;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .item1 {
+        background: #ef9a9a;
+        /* flex-grow: 1; */
+        /* 기본값 0
+        container의 사이즈관련 속성
+        숫자를 주게되면 container의 영역을 다쓴다.
+        container가 작아지면 자신의 고유값(w: 40px h: 40px)을 가진다.
+        */
+        /* flex-shrink: 2; */
+        /* 기본값 0
+        container의 사이즈관련 속성
+        container가 작아졌을 때 어떻게 줄어드는 지
+        */
+        /* flex-basis: 10%; */
+        /* 기본값 auto : grow와 shrink에 맞춰서 아이템이 변형된다
+        쓰지않고 명시할 경우 다른 아이템의 n% 를 쓴다.
+        아이템들이 공간을 얼마나 차지해야하는지 세부적으로 명시가능
+        */
+        /* align-self: center; */
+        /* 컨테이너에 지정된 것을 벗어나서
+        아이템 별로 아이템 배치 가능*/
+    }
+
+    .item2 {
+        background: #f48fb1;
+        /* flex-grow: 1; */
+    }
+    .item3 {
+        background: #ce93d8;
+        /* flex-grow: 1; */
+    }
+    .item4 {
+        background: #b39ddb;
+        /* flex-grow: 1; */
+    }
+    .item5 {
+        background: #90caf9;
+        /* flex-grow: 1; */
+    }
+    .item6 {
+        background: #a5d6a7;
+        /* flex-grow: 1; */
+    }
+    .item7 {
+        background: #e6ee9c;
+        /* flex-grow: 1; */
+    }
