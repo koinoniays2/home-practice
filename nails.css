@@ -1,7 +1,7 @@
 *{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans Display', sans-serif;}
 body { background-color: #FFFDFF;}
 a[href*=flaticon], a[href*=unsplash] { display: none;}
-a {text-decoration: none;}
+a {text-decoration: none; color: 4C4C4C;}
 #header, #footer {
     margin-left: 30px;
     margin-right: 30px;
