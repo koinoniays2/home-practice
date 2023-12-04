@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital@1&display=swap" rel="stylesheet">
     <link href="nails.css" rel="stylesheet" type="text/css" />
     <script src="nails.js"></script>
-    <title></title>
+    <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="header">
@@ -17,8 +18,8 @@
         </div>
         <nav id="header-nav">
             <ul class="header-menu">
-                <a href="#section1"><li><img class="img" src="./images/nail-polish2.png"/>Nails</li></a>
-                <a href="#section2"><li><img class="img" src="./images/nail-polish2.png"/>FootNails</li></a>
+                <a href="#section-employee"><li><img class="img" src="./images/nail-polish2.png"/>Introduce</li></a>
+                <a href="#section-nails-room"><li><img class="img" src="./images/nail-polish2.png"/>Nails</li></a>
                 <a href=""><li><img class="img" src="./images/nail-polish2.png"/>메뉴</li></a>
                 <a href=""><li><img class="img" src="./images/nail-polish2.png"/>메뉴</li></a>
                 <a href=""><li><img class="img" src="./images/nail-polish2.png"/>메뉴</li></a>
@@ -26,14 +27,63 @@
         </nav>
     </header>
     <main id="main">
-        <section id="section1">
+        <div id="banner">
+            <img src="" alt="Dummy Image" />
+            
+        </div>
+        <section id="section-employee">
+            <h2>introduction</h2>
+            <div class="employee1">
+                <img src="images/employee1.png"/>
+                <div class="employee1-introduce">
+                    <dl>
+                        <dt>원장 Dummy</dt>
+                        <dd>15년 경력</dd>
+                        <dd>미용사(네일) 국가자격증</dd>
+                        <dd>Dummy 자격증</dd>
+                        <dd>Dummy 강사</dd>
+                        <dd>Dummy 수상</dd>
+                        <dd><i class="fa-brands fa-instagram"></i> Dummy</dd>
+                    </dl>
+
+                </div>
+            </div>
+            <div class="employee2">
+                <img src="images/employee2.png"/>
+                <div class="employee2-introduce">
+                    <dl>
+                        <dt>실장 Dummy</dt>
+                        <dd>10년 경력</dd>
+                        <dd>미용사(네일) 국가자격증</dd>
+                        <dd>Dummy</dd>
+                        <dd>Dummy</dd>
+                        <dd><i class="fa-brands fa-instagram"></i> Dummy</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="employee3">
+                <img src="images/employee3.png"/>
+                <div class="employee2-introduce">
+                    <dl>
+                        <dt>쌤 Dummy</dt>
+                        <dd>5년 경력</dd>
+                        <dd>미용사(네일) 국가자격증</dd>
+                        <dd>Dummy</dd>
+                        <dd>Dummy</dd>
+                        <dd><i class="fa-brands fa-instagram"></i> Dummy</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section id="section-nails-room">
             <aside class="nails-room-aside">
                 <div>
                     <h2>Nails room</h2>
-                    <p>Enjoy everyone's Nail art!</p>
+                    <p>Made by Dummy's family!</p>
                 </div>
             </aside>
             <div class="nails-room">
+                <button class="pre-btn"><i class="fa-solid fa-arrow-left"></i></button>
                 <ul>
                     <li><img src="./images/nail1.jpg"/></li>
                     <li><img src="./images/nail2.jpg"/></li>
@@ -41,23 +91,7 @@
                     <li><img src="./images/nail4.jpg"/></li>
                     <li><img src="./images/nail5.jpg"/></li>
                 </ul>
-            </div>
-        </section>
-        <section id="section2">
-            <aside class="padis-room-aside">
-                <div>
-                    <h2>FootNails room</h2>
-                    <p>Enjoy everyone's Pedicure!</p>
-                </div>
-            </aside>
-            <div class="padis-room">
-                <ul>
-                    <li><img src="./images/nail1.jpg"/></li>
-                    <li><img src="./images/nail2.jpg"/></li>
-                    <li><img src="./images/nail3.jpg"/></li>
-                    <li><img src="./images/nail4.jpg"/></li>
-                    <li><img src="./images/nail5.jpg"/></li>
-                </ul>
+                <button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </section>
     </main>

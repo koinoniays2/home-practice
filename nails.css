@@ -6,7 +6,7 @@ a {text-decoration: none;}
     margin-left: 30px;
     margin-right: 30px;
 }
-#section1, #section2, #section3, #footer {
+#banner, #section-employee, #section-nails-room, #footer {
     margin-left: 30px;
     margin-right: 30px;
     border-bottom: 3px solid #DAD9FF;
@@ -21,8 +21,12 @@ h2 {
     font-size: 2rem;
     color: #4C4C4C;
 }
+dt {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
-/* --------------------------------------------------------------------- */
+/* ------------------------------header--------------------------------------- */
 #header {
     padding-top: 1rem;
     margin-top: 1rem;
@@ -59,87 +63,106 @@ h2 {
         width: 50px;
         height: 50px;
     }
-/* --------------------------------------------------------------------- */
+/* -------------------------------main-------------------------------------- */
 #main {
     display: flex;
     flex-direction: column;
 }
-#section1 {
+#banner {
+    height: 300px;
+}
+#section-employee {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    
 }
-    .nails-room-aside{
+    #section-employee>h2 {
+        width: 100%;
+        padding-left: 50px; padding-top: 50px;
+    }
+    #section-employee>div {
+        height: 500px;
         flex-basis: 300px;
-        flex-shrink: 0;
-    }
-        .nails-room-aside>div {
-            width: 100%;
-            text-align: right;
-            margin-top: 100px;
-            padding-right: 20px;
-        }
-    .nails-room {
-        flex-basis: 700px;
         flex-grow: 1;
-        height: 500px; /* 임의높이 */
-        overflow: hidden;
+        flex-shrink: 0;
+        display: flex; /* 이미지 중간정렬 */
+        align-items: center; /* 이미지 중간정렬 */
+        flex-wrap: wrap;
+        margin: 50px 20px;
+        opacity: 0; /* for 페이드인 */
+        transition: opacity 0.5s ease-out; /* for 페이드인 */
     }
-        .nails-room>ul {
-            display: flex;
-            list-style: none;
-            margin-top: 100px;
-            border-top: 1px solid #D1B2FF;
-            border-bottom: 1px solid #D1B2FF;
-            padding: 30px 0;
-
+    /* #section-employee>div.show {
+        opacity: 1;
+    } 
+    js의 sectionDiv[i].classList.add('show');, sectionDiv[i].classList.add('show');에서
+    직접 속성에 추가하는 것으로 바꿈
+    */
+        #section-employee>div>div{
+            width: 200px;
+            margin: 0 20px; padding: 0 10px;
+            flex-grow: 1;
+            flex-shrink: 0;
         }
-            .nails-room>ul>li {
-                width: 300px;
-                height: 300px;
-                flex-shrink: 0;
-            }
-                .nails-room>ul>li>img {
-                    width: inherit;
-                    height: inherit;
-                    object-fit: cover;
-                }
 
-#section2 {
+#section-nails-room {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
 }
-    .padis-room-aside {
+    .nails-room-aside {
         flex-basis: 300px;
         flex-shrink: 0;
     }
-        .padis-room-aside>div {
+        .nails-room-aside>div {
             margin-top: 100px;
             width: 100%;
             text-align: left;
             padding-left: 20px;
         }
-    .padis-room {
-        flex-basis: 700px;
+    .nails-room {
+        flex-basis: 300px;
         flex-grow: 1;
-        height: 500px; /* 임의높이 */
+        height: 550px; /* 임의높이 */
         overflow: hidden;
+        position: relative;
     }
-    .padis-room>ul {
+    .nails-room>.pre-btn, .next-btn{
+        width: 50px; height: 50px;
+        border-radius: 50%;
+        opacity: 0.3;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .nails-room>.pre-btn:hover,.next-btn:hover {
+        opacity: 1;
+    }
+    .nails-room>.pre-btn{
+        position: absolute;
+        top: 50%;
+    }
+    .nails-room>.next-btn{
+        position: absolute;
+        top: 50%;
+        right: 0px;
+    }
+    .nails-room>ul {
         display: flex;
         list-style: none;
         margin-top: 100px;
-        border-top: 1px solid #D1B2FF;
-        border-bottom: 1px solid #D1B2FF;
+        border-top: 1px solid #D1B2FF; border-bottom: 1px solid #D1B2FF;
         padding: 30px 0;
-
     }
-        .padis-room>ul>li {
+        .nails-room>ul>li {
             width: 300px;
             height: 300px;
             flex-shrink: 0;
+            transition: transform 0.5s ease-in-out;
         }
-            .padis-room>ul>li>img {
+            .nails-room>ul>li>img {
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
@@ -154,10 +177,5 @@ h2 {
 }
 /* --------------------------------------------------------------------- */
 @media screen and (max-width: 900px) {
-    .nails-room-aside{
-        display: none;
-    }
-    .padis-room-aside {
-        display: none;
-    }
+
 }
