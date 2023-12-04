@@ -59,4 +59,13 @@ window.addEventListener('load', function () {
     nextBtn.addEventListener('click', function () {
         changeImage("next");
     });
+
+    /* --------------------------toggl--------------------------------- */
+    let togglBtn = document.querySelector('.toggl');
+    let menu = document.querySelector('.header-menu');
+    togglBtn.addEventListener('click', function(){
+        menu.classList.toggle('active');
+        /* classList.toggle(클래스):해당 클래스가 이미 존재하면 제거하고
+        존재하지 않으면 추가한다 */
+    })
 });

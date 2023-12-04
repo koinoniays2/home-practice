@@ -34,6 +34,10 @@ dt {
     flex-direction: column;
     align-items: center;
     border: 3px solid #DAD9FF;
+    position: relative;
+}
+.toggl { /* 미디어 쿼리 */
+    display: none;
 }
 
 .header-logo img{
@@ -176,6 +180,19 @@ dt {
     background-color: #e8d8ff;
 }
 /* --------------------------------------------------------------------- */
-@media screen and (max-width: 900px) {
-
+@media screen and (max-width: 768px) {
+    .header-menu {
+        display: none;
+    }
+    .toggl {
+        display: block;
+        position: absolute;
+        top: 0; right: 0;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .header-menu.active { /* js에서 클래스의 존재 여부 토글*/
+        display: flex;
+        flex-direction: column;
+    }
 }
