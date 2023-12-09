@@ -1,0 +1,45 @@
+body { margin: 0; padding: 0; background-color: lightblue; }
+.outline, .box {
+    width: 60px;
+    height: 60px;
+}
+.outline {
+    border: 3px solid yellow;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.box {
+    background-color: blue;
+}
+.box1 {
+    /* transform: translate(20px, 20px); */
+}
+.box2 {
+    transform: scale(0.5);
+}
+.outline-box3 {
+    perspective: 60px; /* 원근 표현 */
+}
+.box3 {
+    transform: rotateY(30deg);
+}
+
+.box4 {
+    transform: skewY(15deg);
+}
+
+/* Transition */
+.box1 {
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out; */
+    transition: 1s ease-out;
+}
+.box1:hover {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: rotate(100deg);
+    transform: translate(20px, 20px);
+}
