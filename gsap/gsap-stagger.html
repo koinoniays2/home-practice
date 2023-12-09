@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <title>Document</title>
+    <style>
+        #demo {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 10px solid gray;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .gray {
+            background-color: lightgray;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <div class="box green"></div>
+        <div class="box gray"></div>
+        <div class="box orange"></div>
+        <div class="box green"></div>
+        <div class="box gray"></div>
+        <div class="box orange"></div>
+        <div class="box green"></div>
+        <div class="box gray"></div>
+        <div class="box orange"></div>
+    </div>
+    <script>
+        /*
+        gsap.to('.box',{
+            duration: 1,
+            rotation: 360,
+            y: 100,
+            stagger: 1 //1초마다 순차적으로 실행됨
+        });*/
+        /*
+        gsap.to('.box',{
+            duration: 1,
+            rotation: 360,
+            y: 100,
+            stagger: {
+                each: 0.5 // 시간
+            }
+        });*/
+        /*
+        gsap.to('.box',{
+            duration: 1,
+            rotation: 360,
+            y: 100,
+            stagger: {
+                amount: 1, //amount초를 박스의 수만큼 나눠서 실행
+                from: 'end' //기본값 'start' (실행 지점) center도 있다.
+            }
+        });
+        */
+        /*
+        gsap.to('.box',{
+            duration: 1,
+            rotation: 360,
+            y: 100,
+            stagger: {
+                 amount: 1, //amount초를 박스의 수만큼 나눠서 실행
+                 from: 'edges' //모서리부터 실행
+            }
+        });
+         */
+
+        // timeline() 응용
+        let tl = gsap.timeline();
+        tl.to('.box', {
+            duration: 1, rotation: 360, y: 100,
+            stagger: {
+                amount: 1,
+                from: 'center'
+            }
+        })
+        .to('.box', {
+            duration: 1, rotation: 0, y:0,
+            stagger: {
+                amount: 1,
+                from: 'center'
+            }
+        }, '+=1')
+
+    </script>
+</body>
+
+</html>
