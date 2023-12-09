@@ -61,7 +61,7 @@ dt {
         text-decoration-color: #D1B2FF;
     }
     .header-menu a:hover .img{
-        content: url(./images/nail-polish3.png);
+        content: url(home-images/nail-polish3.png);
     }
     .header-menu img{
         width: 50px;
