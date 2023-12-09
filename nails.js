@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
     let nextBtn = document.querySelector(".next-btn");
     let li = document.querySelectorAll(".nails-room li");
     let imgesLength = li.length;
-    
+
     let currentIndex = 0; //현재 인덱스
     function changeImage(direction) {
         if (direction === "next") {
@@ -63,9 +63,43 @@ window.addEventListener('load', function () {
     /* --------------------------toggl--------------------------------- */
     let togglBtn = document.querySelector('.toggl');
     let menu = document.querySelector('.header-menu');
-    togglBtn.addEventListener('click', function(){
+    togglBtn.addEventListener('click', function () {
         menu.classList.toggle('active');
         /* classList.toggle(클래스):해당 클래스가 이미 존재하면 제거하고
         존재하지 않으면 추가한다 */
     })
+
+    /* --------------------------img--------------------------------- */
+    let img = document.querySelector('#banner img');
+    function banner() {
+        let width = img.getBoundingClientRect().width;
+
+        let tl = gsap.timeline();
+        tl.to('#banner>img:nth-child(5)', {
+            x: width * 4,
+            opacity: 1,
+            duration: 0.3
+        })
+            .to('#banner>img:nth-child(4)', {
+                x: width * 3,
+                opacity: 1,
+                duration: 0.3
+            })
+            .to('#banner>img:nth-child(3)', {
+                x: width * 2,
+                opacity: 1,
+                duration: 0.3
+            })
+            .to('#banner>img:nth-child(2)', {
+                x: width,
+                opacity: 1,
+                duration: 0.3
+            })
+            .to('#banner>img:nth-child(1)', {
+                opacity: 1,
+            })
+    }
+    banner();
+
+    window.addEventListener('resize', banner);
 });
