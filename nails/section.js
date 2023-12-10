@@ -46,7 +46,6 @@ window.addEventListener('load', function () {
             start: '0 0',
             end: '50% 50%',
             scrub: 2,
-            markers: true
         },
         x: 1000
     });

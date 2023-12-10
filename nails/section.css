@@ -112,18 +112,22 @@ a {
 /* ------------------media------------------*/
 @media screen and (max-width: 768px) {
     .section1 h1>span:nth-child(1) {
-        margin-left: 30px;
+        margin-left: 25%;
+        font-size: 2rem;
     }
     .section1 h1>span:nth-child(2) {
-        margin-left: 30px;
-        font-size: 5rem;
-    
+        margin-left: 25%;
+        font-size: 4rem;
+
     }
     .section1 h1>span:nth-child(3) {
-        margin-left: 30px;
-        font-size: 3rem;
+        margin-left: 25%;
+        font-size: 2rem;
     }
-    .section1 h1>span:nth-child(3)>i {
-        margin-left: 10px;
+    .section1 h1>span:nth-child(3)>a { padding: 5px; }
+    .section1 h1 img {
+        width: 30px;
+        height: 30px;
     }
+
 }
