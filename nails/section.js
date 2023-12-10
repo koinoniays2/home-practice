@@ -1,9 +1,10 @@
 window.addEventListener('load', function () {
-    gsap.to('.background', {
+    let tl = gsap.timeline();
+    tl.to('.section1>.background', {
         duration: 2,
         scale: 1,
         ease: 'power2.out'
-    });
+    })
 
     let tl1 = gsap.timeline();
     tl1.from('.section1 h1>span:nth-child(2)', {
@@ -16,7 +17,7 @@ window.addEventListener('load', function () {
     })
     .to('.section1 h1>span:nth-child(2)', {
         opacity: 1,
-    });
+    })
     
     gsap.from('.section1 h1>span:nth-child(1)',{
         duration: 1,
@@ -26,5 +27,27 @@ window.addEventListener('load', function () {
     gsap.from('.section1 h1>span:nth-child(3)',{
         duration: 1,
         x: 500
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.section2>h1',{
+        scrollTrigger: {
+            trigger: '.section2',
+            start: '0 0',
+            end: '50% 50%',
+            scrub: 2,
+        },
+        x: -1000
+    });
+
+    gsap.from('.section3>h1',{
+        scrollTrigger: {
+            trigger: '.section3',
+            start: '0 0',
+            end: '50% 50%',
+            scrub: 2,
+            markers: true
+        },
+        x: 1000
     });
 });
