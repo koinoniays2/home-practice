@@ -30,7 +30,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    z-index: -1;
+    z-index: -1; /* 없으면 fixed때문에 다른이미지 안올라옴 */
     transform: scale(3); /* 초기에 이미지가 가까이 보이도록 설정 */
     transform-origin: center center;
 }

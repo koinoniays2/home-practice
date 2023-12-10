@@ -33,20 +33,20 @@ window.addEventListener('load', function () {
     gsap.from('.section2>h1',{
         scrollTrigger: {
             trigger: '.section2',
-            start: '0 0',
-            end: '50% 50%',
+            start: 'top-=100 0',
+            end: '50%-=100 50%',
             scrub: 2,
         },
-        x: -1000
+        x: -1500
     });
 
     gsap.from('.section3>h1',{
         scrollTrigger: {
             trigger: '.section3',
-            start: '0 0',
-            end: '50% 50%',
+            start: 'top-=100 0',
+            end: '50%-=100 50%',
             scrub: 2,
         },
-        x: 1000
+        x: 1500
     });
 });
