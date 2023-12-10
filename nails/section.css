@@ -112,16 +112,16 @@ a {
 /* ------------------media------------------*/
 @media screen and (max-width: 768px) {
     .section1 h1>span:nth-child(1) {
-        margin-left: 25%;
+        margin-left: 10%;
         font-size: 2rem;
     }
     .section1 h1>span:nth-child(2) {
-        margin-left: 25%;
+        margin-left: 10%;
         font-size: 4rem;
 
     }
     .section1 h1>span:nth-child(3) {
-        margin-left: 25%;
+        margin-left: 10%;
         font-size: 2rem;
     }
     .section1 h1>span:nth-child(3)>a { padding: 5px; }
