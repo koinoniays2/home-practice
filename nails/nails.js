@@ -34,7 +34,9 @@ window.addEventListener('load', function () {
     let imgesLength = li.length;
 
     let currentIndex = 0; //현재 인덱스
-    function changeImage(direction) {
+    function changeImage(direction) { 
+        /* 매개변수에 width를 넣고 호출할때 width를 넣으면 자동슬라이드 넘김 길이 조정가능
+        -> translateValue에 -currentIndex*width 해줘야함*/
         if (direction === "next") {
             /*다음 버튼을 누르면 현재 인덱스+1 % 이미지길이 즉, 나머지가 인덱스가된다.
             1 % 5 = 1, 2 % 5 = 2... 인덱스가 넘어가도 나머지를 새로운 인덱스로 설정하기 때문에 
@@ -46,7 +48,8 @@ window.addEventListener('load', function () {
 
         /* 변경된 인덱스에 따라 각 이미지의 현재위치에서 이동할 거리를 계산 
         (300px는 각 이미지의 가로 너비) */
-        let translateValue = -currentIndex * 300;
+        // li[0].getBoundingClientRect().width;
+        let translateValue = -currentIndex * li[0].getBoundingClientRect().width;
         for (let i = 0; i < li.length; i++) {
             li[i].style.transform = `translateX(${translateValue}px)`;
             // console.log(li[i].style.transform);
@@ -59,6 +62,11 @@ window.addEventListener('load', function () {
     nextBtn.addEventListener('click', function () {
         changeImage("next");
     });
+
+    // 자동슬라이드
+    setInterval(function(){
+        changeImage("next");
+    },1000);
 
     /* --------------------------toggl--------------------------------- */
     let togglBtn = document.querySelector('.toggl');
